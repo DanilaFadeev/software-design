@@ -2,7 +2,7 @@
 
 ## Homepage
 title = "Software Design"
-titleSeparator = ""
+titleSeparator = "|"
 titleAddition = ""
 description = "Collection of materials, notes, and practices of writing secure, scalable, efficient, and reliable software"
 
@@ -11,9 +11,9 @@ description = "Collection of materials, notes, and practices of writing secure, 
 sourcesRepo = "https://github.com/DanilaFadeev/software-design-sources"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["website-preview.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
+domainTLD = "software-design.netlify.app"
 titleHome = "Software Design"
 
 ## Twitter Cards
