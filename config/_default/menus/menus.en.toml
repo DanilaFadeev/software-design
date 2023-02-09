@@ -9,6 +9,11 @@
   url = "/architecture/service-communication/message-brokers/"
   weight = 10
 
+[[main]]
+  name = "Backend"
+  url = "/backend/authentication/basic-auth"
+  weight = 20
+
 # [[main]]
 #   name = "Blog"
 #   url = "/blog/"
