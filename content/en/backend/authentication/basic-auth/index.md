@@ -9,7 +9,7 @@ menu:
   backend:
     parent: "authentication"
     identifier: "basic-auth-42e2cf3df1f7c2ae8959992d8d797fb5"
-weight: 999
+weight: 20
 toc: true
 type: docs
 layout: single
