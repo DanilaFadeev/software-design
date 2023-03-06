@@ -291,7 +291,7 @@ This command will generate the following files that will be used for the gRPC se
 If you want to use these files in the **ES Modules** project, change their file extension to `.cjs`.
 
 {{< alert icon="👉" >}}
-The complete example is available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/backend/grpc/nodejs-static-codegen).
+The complete example is available {{< source "here" "/backend/grpc/nodejs-static-codegen" >}}.
 {{< /alert >}}
 
 ### Python
@@ -318,7 +318,7 @@ For each Protocol Buffer service definition, the primary elements are created (`
 The `greeter_pb2.pyi` file will contain builder classes for each **message** in the Protobuf definition. These classes should be used to work with the specified gRPC entities.
 
 {{< alert icon="👉" >}}
-The complete example is available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/backend/grpc/python-codegen).
+The complete example is available {{< source "here" "/backend/grpc/python-codegen" >}}.
 {{< /alert >}}
 
 ## Streaming
@@ -442,7 +442,7 @@ tuneStream.end(); // complete the client's stream
 
 ## Examples
 {{< alert icon="👉" >}}
-Various gRPC examples in **Node.js** and **Python** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/backend/grpc).
+Various gRPC examples in **Node.js** and **Python** are available {{< source "here" "/backend/grpc/" >}}.
 {{< /alert >}}
 
 ## Resources

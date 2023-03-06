@@ -273,7 +273,7 @@ as a response, it starts receiving the published messages based on topics and th
 ## Examples
 
 {{< alert icon="👉" >}}
-MQTT usage examples in **Node.js** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/mqtt).
+MQTT usage examples in **Node.js** are available {{< source "here" "/architecture/mqtt/" >}}.
 {{< /alert >}}
 
 ## Resources

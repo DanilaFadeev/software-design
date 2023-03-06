@@ -97,7 +97,7 @@ class ConcreteCreatorB extends Creator {
 #### Examples
 
 {{< alert icon="👉" >}}
-The complete **Factory Method** implementation with examples is available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/design-patterns/factory-method/).
+The complete **Factory Method** implementation with examples is available {{< source "here" "/architecture/design-patterns/factory-method/" >}}.
 {{< /alert >}}
 
 ## 🏘 Abstract Factory
@@ -212,7 +212,7 @@ class Client {
 #### Examples
 
 {{< alert icon="👉" >}}
-The complete **Abstract Factory** implementation with examples is available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/design-patterns/abstract-factory).
+The complete **Abstract Factory** implementation with examples is available {{< source "here" "/architecture/design-patterns/abstract-factory/" >}}.
 {{< /alert >}}
 
 ## 👷 Builder
@@ -317,7 +317,7 @@ class Director {
 #### Examples
 
 {{< alert icon="👉" >}}
-The complete **Builder** implementation with examples is available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/design-patterns/builder).
+The complete **Builder** implementation with examples is available {{< source "here" "/architecture/design-patterns/builder/" >}}.
 {{< /alert >}}
 
 ## 🧬 Prototype
@@ -397,7 +397,7 @@ const copy = subclassPrototype.clone(); // creates identical copy
 #### Examples
 
 {{< alert icon="👉" >}}
-The complete **Prototype** implementation with examples is available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/design-patterns/prototype).
+The complete **Prototype** implementation with examples is available {{< source "here" "/architecture/design-patterns/prototype/" >}}.
 {{< /alert >}}
 
 ## 🥇 Singleton
@@ -459,7 +459,7 @@ console.log(Singleton.getInstance() === Singleton.getInstance()); // true
 #### Examples
 
 {{< alert icon="👉" >}}
-The complete **Singleton** and **Multiton** implementations are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/design-patterns/singleton).
+The complete **Singleton** and **Multiton** implementations are available {{< source "here" "/architecture/design-patterns/singleton/" >}}.
 {{< /alert >}}
 
 ## 🏊‍♂️ Object Pool
@@ -539,5 +539,5 @@ console.log('Are products the same?', concreteProduct1 === concreteProduct3);
 #### Examples
 
 {{< alert icon="👉" >}}
-The complete **Object Pool** implementation is available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/design-patterns/objects-pool).
+The complete **Object Pool** implementation is available {{< source "here" "/architecture/design-patterns/objects-pool/" >}}.
 {{< /alert >}}

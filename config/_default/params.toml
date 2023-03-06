@@ -9,6 +9,7 @@ description = "Collection of materials, notes, and practices of writing secure, 
 ## Documentation
 # docsVersion = "0.3"
 sourcesRepo = "https://github.com/DanilaFadeev/software-design-sources"
+sourcesBranch = "main"
 
 ## Open Graph
 images = ["website-preview.png"]

@@ -261,7 +261,7 @@ It's also recommended to use [TLS connection](https://www.rabbitmq.com/ssl.html)
 ## Examples
 
 {{< alert icon="👉" >}}
-RabbitMQ usage examples in **Node.js** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/rabbitmq).
+RabbitMQ usage examples in **Node.js** are available {{< source "here" "/architecture/rabbitmq/" >}}.
 {{< /alert >}}
 
 ## Resources

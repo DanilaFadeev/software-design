@@ -313,7 +313,7 @@ Authorization: Bearer <jwt-token>
 ## Examples
 
 {{< alert icon="👉" >}}
-JWT Tokens implementation examples in **Node.js** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/backend/jwt-token).
+JWT Tokens implementation examples in **Node.js** are available {{< source "here" "/backend/jwt-token/" >}}.
 {{< /alert >}}
 
 ## Resources

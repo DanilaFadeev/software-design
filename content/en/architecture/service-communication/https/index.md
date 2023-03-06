@@ -161,7 +161,7 @@ However, there are some Let's Encrypt limitations that should be noticed:
 ## Examples
 
 {{< alert icon="👉" >}}
-HTTPS usage examples in **Node.js** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/https).
+HTTPS usage examples in **Node.js** are available {{< source "here" "/architecture/https/" >}}.
 {{< /alert >}}
 
 ## Resources

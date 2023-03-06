@@ -299,7 +299,7 @@ AMQP provides a possibility for the implementation of various extensions, such a
 ## Examples
 
 {{< alert icon="👉" >}}
-AMQP usage examples in **Node.js** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/rabbitmq).
+AMQP usage examples in **Node.js** are available {{< source "here" "/architecture/rabbitmq/" >}}.
 {{< /alert >}}
 
 ## Resources

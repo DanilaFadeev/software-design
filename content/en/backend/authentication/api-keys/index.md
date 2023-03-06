@@ -284,7 +284,7 @@ You must include an API key with every request. Also, HTTPS is required for requ
 ### Custom examples
 
 {{< alert icon="👉" >}}
-Api Keys implementation examples in **Node.js** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/backend/api-keys).
+Api Keys implementation examples in **Node.js** are available {{< source "here" "/backend/api-keys/" >}}.
 {{< /alert >}}
 
 ## Resources

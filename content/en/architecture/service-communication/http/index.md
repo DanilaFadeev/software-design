@@ -251,7 +251,7 @@ If the `Location` header redirects to the initially requested resource, it will 
 ### Examples
 
 {{< alert icon="👉" >}}
-Redirects usage examples in **Node.js** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/http/redirects.js).
+Redirects usage examples in **Node.js** are available {{< source "here" "/architecture/http/redirects.js" >}}.
 {{< /alert >}}
 
 ## Cookies
@@ -322,7 +322,7 @@ Set-Cookie: user=sample; Path=/app
 ### Examples
 
 {{< alert icon="👉" >}}
-HTTP Cookie usage examples in **Node.js** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/architecture/http/cookie.js).
+HTTP Cookie usage examples in **Node.js** are available {{< source "here" "/architecture/http/cookie.js" >}}.
 {{< /alert >}}
 
 ## Caching

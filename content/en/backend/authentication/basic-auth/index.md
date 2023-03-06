@@ -120,7 +120,7 @@ curl -u "admin:admin" http://localhost:3000
 ## Examples
 
 {{< alert icon="👉" >}}
-Basic Auth implementation examples in **Node.js** and **Nginx** are available [here](https://github.com/DanilaFadeev/software-design-sources/tree/main/backend/basic-auth).
+Basic Auth implementation examples in **Node.js** and **Nginx** are available {{< source "here" "/backend/basic-auth/" >}}.
 {{< /alert >}}
 
 ## Resources
