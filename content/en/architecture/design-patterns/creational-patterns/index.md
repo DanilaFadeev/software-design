@@ -10,7 +10,7 @@ menu:
   architecture:
     parent: "design-patterns"
     identifier: "creational-patterns-fc07bec4053e26034c10245bcad8f8ff"
-weight: 20
+weight: 210
 toc: true
 type: docs
 layout: single
@@ -21,6 +21,14 @@ layout: single
 **Creational patterns** represent how objects or groups of related objects are initialized. They help to make the system independent of how the objects are created and composed.
 
 **Creational patterns** encapsulate the information about concrete classes used in a system and hide initialization details. Instead of the classes themselves, the system relies on their interfaces.
+
+### Materials
+
+- 🌐 [Wikipedia - Creational pattern](https://en.wikipedia.org/wiki/Creational_pattern)
+- 📝 [Source Making - Creational patterns](https://sourcemaking.com/design_patterns/creational_patterns)
+- 📝 [Refactoring Guru - Creational Design Patterns](https://refactoring.guru/design-patterns/creational-patterns)
+- ⌨️ [Design Patterns For Humans - Creational Design Patterns](https://github.com/kamranahmedse/design-patterns-for-humans#creational-design-patterns)
+- 📚 [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Object-Oriented-Addison-Wesley-Professional-ebook/dp/B000SEIBB8)
 
 ## 🏭 Factory Method 
 
