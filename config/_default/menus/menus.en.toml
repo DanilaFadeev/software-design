@@ -14,6 +14,11 @@
   url = "/backend/authentication/basic-auth"
   weight = 20
 
+[[main]]
+  name = "Computer Science"
+  url = "/computer-science/fundamentals/algorithms-analyses"
+  weight = 30
+
 # [[main]]
 #   name = "Blog"
 #   url = "/blog/"
