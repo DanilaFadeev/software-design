@@ -15,24 +15,24 @@
 {{ end }}
 
 {{ define "sidebar-prefooter" }}
-  {{ if and (eq $.Site.Language.LanguageName "English") false }}
+  {{ if and (eq $.Site.Language.LanguageName "English") true }}
   <section class="section section-sm">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-lg-5">
-          <h2 class="h4">Security aware</h2>
-          <p>Get A+ scores on <a href="https://observatory.mozilla.org/analyze/doks.netlify.app">Mozilla Observatory</a> out of the box. Easily change the default Security Headers to suit your needs.</p>
+          <h2 class="h4">Architecture 🏛️</h2>
+          <p>Design patterns and methodologies for building resilient and robust software products</p>
         </div>
         <div class="col-lg-5">
-          <h2 class="h4">Fast by default ⚡️</h2>
-          <p>Get 100 scores on <a href="https://googlechrome.github.io/lighthouse/viewer/?gist=59aafe464a68f8bc30b8e9a636d5b053">Google Lighthouse</a> by default. Doks removes unused css, prefetches links, and lazy loads images.</p>
+          <h2 class="h4">Backend 🏗️</h2>
+          <p>Various tools and practices covering different aspects of backend system development</p>
         </div>
         <div class="col-lg-5">
-          <h2 class="h4">SEO-ready</h2>
-          <p>Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.</p>
+          <h2 class="h4">Computer Science 🔬</h2>
+          <p>Common data structures, algorithms, and concepts of software engineering</p>
         </div>
       </div>
-      <div class="row justify-content-center text-center">
+      <!-- <div class="row justify-content-center text-center">
         <div class="col-lg-5">
           <h2 class="h4">Full text search</h2>
           <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
@@ -45,7 +45,7 @@
           <h2 class="h4">Dark mode</h2>
           <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
   {{ end }}
