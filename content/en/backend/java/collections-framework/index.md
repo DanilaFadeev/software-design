@@ -410,6 +410,172 @@ identityMap.put(key2, "second");
 System.out.print(identityMap); // {default=first, default=second}
 ```
 
+## Set
+
+The **Set** interface represents an unordered collection of unique elements.
+
+- Extends **Collection** interface with a feature that restricts the insertion of duplicated elements
+
+![Java Collections Framework - Set](java-collections-framework-set.png)
+
+#### Time complexity:
+
+| Class / Operation | Data Structure | `contains()` | `add()` | `remove()` |
+| --- | --- | --- | --- | --- |
+| **HashSet** | Hash Table | O(1) | O(1) | O(1) |
+| **LinkedHashSet** | Hash Table + Linked List | O(1) | O(1) | O(1) |
+| **TreeSet** | Red-Black Tree | O(log(N)) | O(log(N)) | O(log(N)) |
+
+### HashSet
+
+**HashSet** class is implemented using a **HashMap** instance backed by a **hash table**. This fact means a constant performance for the basic operations like _add_, _remove_, _contains_, and _size_.
+
+- Implements **Set** interface and extends **AbstractSet** class
+- The underlying data structure is **Hashtable**
+- Restricts duplicated values, which means that all the values in the Set must be unique
+- **NULL** elements are not allowed
+- Unordered
+
+```java
+// Declaration
+public class HashSet<E> extends AbstractSet<E>
+  implements Set<E>, Cloneable, java.io.Serializable
+
+// Constructors
+public HashSet()
+public HashSet(Collection<? extends E> c)
+public HashSet(int initialCapacity)
+public HashSet(int initialCapacity, float loadFactor)
+```
+
+**Usage example:**
+
+```java
+Set<String> names = new HashSet<>();
+
+names.add("Jhon");
+names.add("Doe");
+
+names.contains("Jhon"); // true
+names.remove("Jhon"); // true
+```
+
+### LinkedHashSet
+
+**LinkedHashSet** is an ordered version of the **HashSet** class that maintains a double-linked list for all elements. **LinkedHashSet** allows iterating through its elements in the same order they were inserted.
+
+- Maintains insertion order
+
+```java
+// Declaration
+public class LinkedHashSet<E> extends HashSet<E>
+  implements Set<E>, Cloneable, java.io.Serializable
+
+// Constructors
+public LinkedHashSet()
+public LinkedHashSet(Collection<? extends E> c)
+public LinkedHashSet(int initialCapacity) // default 16
+public LinkedHashSet(int initialCapacity, float loadFactor) // default 16 and .75f
+```
+
+**Usage example:**
+
+```java
+Set<Integer> numsSet = new HashSet<>();
+Set<Integer> numsLinkedSet = new LinkedHashSet<>();
+
+for (int i = 10; i > 0; i--) {
+    numsSet.add(i);
+    numsLinkedSet.add(i);
+}
+
+System.out.println(numsSet);       // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+System.out.println(numsLinkedSet); // [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+```
+
+### EnumSet
+
+**EnumSet** is an implementation of the **Set** interface for use with _enumerable types_.
+
+- It's a high-performance **Set** implementation, much faster than **HashSet**
+- All the elements must come from the same enumeration
+- Uses a **fail-safe** iterator (won't throw an exception if the set is modified during the iteration)
+- **NULL** values are not allowed
+
+```java
+// Declaration
+public abstract sealed class EnumSet<E extends Enum<E>> extends AbstractSet<E>
+  implements Cloneable, java.io.Serializable permits JumboEnumSet, RegularEnumSet
+
+// Constructors
+EnumSet(Class<E>elementType, Enum<?>[] universe)
+```
+
+**Usage example:**
+
+```java
+enum WorkDays { MON, TUE, WED, THU, FRI }; 
+EnumSet<WorkDays> set1, set2, set3, set4; 
+
+// [MON, TUE, WED]
+set1 = EnumSet.of(WorkDays.MON, WorkDays.TUE, WorkDays.WED); 
+
+// [THU, FRI]
+set2 = EnumSet.complementOf(set1);
+
+// [MON, TUE, WED, THU, FRI]
+set3 = EnumSet.allOf(WorkDays.class); 
+
+// [MON, TUE, WED]
+set4 = EnumSet.range(WorkDays.MON, WorkDays.WED); 
+```
+
+### TreeSet
+
+**TreeSet** class implements the **SortedSet** interface and uses a balanced _Tree_ as an underlying data structure. The added elements can be ordered by a custom **Comparator** provided at set creation time. The main advantage of storing the elements as a tree is additional navigation methods for traversing that tree.
+
+- The implementation of a TreeSet is not synchronized
+
+```java
+// Declaration
+public class TreeSet<E> extends AbstractSet<E>
+  implements NavigableSet<E>, Cloneable, java.io.Serializable
+
+// Constructors
+public TreeSet()
+public TreeSet(SortedSet<E> s)
+public TreeSet(Comparator<? super E> comparator)
+public TreeSet(Collection<? extends E> c)
+```
+
+**Usage example:**
+
+```java
+public class TreeSetExample {
+  static class ModulusComparator implements Comparator<Integer> {
+    @Override
+    public int compare(Integer o1, Integer o2) {
+      return (o1 % 10) - (o2 % 10);
+    }
+  }
+    
+  public static void main(String[] args) {
+    Comparator<Integer> comparator = new ModulusComparator();
+    TreeSet<Integer> numbers = new TreeSet<>(comparator);
+    
+    numbers.add(8);
+    numbers.add(4);
+    numbers.add(15);
+    numbers.add(19);
+    numbers.add(22);
+    numbers.add(53);
+    numbers.add(101);
+    
+    System.out.println(numbers); // [101, 22, 53, 4, 15, 8, 19]
+  }
+}
+```
+
 ## Resources
 
 - 📑 [Collections in Java - GeeksforGeeks](https://www.geeksforgeeks.org/collections-in-java-2/)
