@@ -9,7 +9,7 @@ menu:
   computer-science:
     parent: ""
     identifier: "sorting-algorithms-bbae09090799601e9fa7a9f4d0bf47a0"
-weight: 20
+weight: 30
 type: docs
 layout: list
 ---
