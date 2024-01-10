@@ -41,17 +41,211 @@ Java collection classes and interfaces are stored in the `java.util` package. Th
 
 A **Collection** represents a group of objects (elements).
 
-### Set Interface
-
-**Set** is a collection that cannot contain duplicate elements.
-
-### List Interface
-
-**List** is an ordered collection that can contain duplicated elements. All the elements are accessed by their positions in the collection (index).
-
 ### Queue Interface
 
 **Queue** interface maintains a specific order of elements extraction (for example, FIFO). -->
+
+## List
+
+The **List** interface provides a way to store ordered elements sequentially. It allows positional access and insertion of elements. Classes that implement the interface: **ArrayList**, **LinkedList**, **Vector**, and **Stack**.
+
+The **List** interface uses **ListIterator** to iterate through the elements in forward and backward directions.
+
+![Java Collections Framework - List](java-collections-framework-list.png)
+
+#### Common operations:
+
+- **Adding** new elements to the existing list: `add(Object)`, `add(int index, Object)`
+- **Accessing** elements: `get(int index)`
+- **Updating** existing elements: `set(int index, Object)`
+- **Removing** elements: `remove(Object)`, `remove(int index)`
+- **Checking** the element presentence: `contains(Object)`
+- **Retrieving the position** of the specific element: `indexOf(element)`, `lastIndexOf(element)`
+
+#### Time complexity:
+
+| Class / Operation | Data Structure | `add()` | `remove()` | `get()` |
+| --- | --- | --- | --- | --- |
+| **ArrayList** | Resizable Array | O(N) | O(N) | O(1) |
+| **LinkedList** | Doubly Linked List | O(1) | O(1) | O(N) |
+| **Vector** | Resizable Array | O(N) | O(N) | O(1) |
+| **Stack** | Stack | O(1) | O(1) | O(N) |
+
+### ArrayList
+
+**ArrayList** class provides dynamic arrays in Java, which can be slower than regular arrays but helpful in cases where the size of an array is frequently changed. In other words, it provides the functionality of a dynamic array where the size is not fixed and can be adjusted in runtime.
+
+Under the hood, **ArrayList** uses a plain array of a bigger size. That size automatically increases when we add more items or decreases when we remove them.
+
+**ArrayList** stores data till the ArrayList size is full. After that, the size doubles if we want to store more elements. Below there is the simplified algorithm of how the **ArrayList** expands:
+
+1. Reserves a bigger-sized memory on heap memory
+2. Copies existing elements to the new memory
+3. Deletes the old memory
+
+#### Important notes:
+
+- **ArrayList** is initialized with the default capacity of 10 elements, but this value changes when we add or remove elements
+- **ArrayList** allows us to access the list randomly
+- To store _primitive types_, we must use wrapper classes (for instance, **Integer**, **Boolean**, etc.)
+- **ArrayList** is not _synchronized_ (the **Vector** class does)
+- **NULL** and duplicated values are allowed
+- The insertion order is preserved
+
+```java
+// Declaration
+public class ArrayList<E> extends AbstractList<E>
+  implements List<E>, RandomAccess, Cloneable, java.io.Serializable
+
+// Constructors
+public ArrayList()
+public ArrayList(int initialCapacity)
+public ArrayList(Collection<? extends E> c)
+```
+
+**Usage example:**
+
+```java
+List<String> langs = new ArrayList<>();
+
+langs.add("Java");           // [Java]
+langs.add("Python");         // [Java, Python]
+langs.add("Ruby");           // [Java, Python, Ruby]
+langs.add("Erlang");         // [Java, Python, Ruby, Erlang]
+
+langs.add(1, "Elixir");      // [Java, Elixir, Python, Ruby, Erlang]
+langs.add(3, "Elixir");      // [Java, Elixir, Python, Elixir, Ruby, Erlang]
+
+langs.contains("Elixir");    // true
+langs.indexOf("Elixir");     // 1
+langs.lastIndexOf("Elixir"); // 3
+
+langs.remove("Elixir");      // [Java, Python, Elixir, Ruby, Erlang]
+```
+
+### LinkedList
+
+**LinkedList** class is implemented on top of the _linked list_ data structure that stores its elements as a separate node. Every node consists of two parts: actual data and the link to the next node. The nodes are linked using pointers and addresses.
+
+- **LinkedList** works as a dynamic array, so we don't need to specify its capacity on initialization.
+- **LinkedList** uses a double-linked list containing two pointers - for the forward and the backward nodes.
+- **LinkedList** comes with efficient insertion and deletion operations because it's not required to shift the existing items but rather update the links on sibling nodes.
+- It's simple to iterate over the elements in both directions
+- **LinkedList** requires more memory compared to the **ArrayList** because it also stores the node references
+- It's not possible to access an element by its index, so we need to iterate over the list until we find the match
+
+```java
+// Declaration
+public class LinkedList<E> extends AbstractSequentialList<E>
+  implements List<E>, Deque<E>, Cloneable, java.io.Serializable
+
+// Constructors
+public LinkedList()
+public LinkedList(Collection<? extends E> c)
+```
+
+**Usage example:**
+
+```java
+LinkedList<String> workingDays = new LinkedList<>();
+
+workingDays.add("Monday");
+workingDays.add("Tuesday");
+workingDays.add("Wednesday");
+workingDays.add("Thursday");
+workingDays.add("Friday");
+
+// Forward iteration
+for (String day : workingDays) {
+  System.out.print(day + " ");
+}
+
+// Backward iteration
+Iterator<String> descendingIterator = workingDays.descendingIterator();
+while (descendingIterator.hasNext()) {
+  System.out.print(descendingIterator.next() + " ");
+}
+```
+
+### Vector
+
+**Vector** implements a resizable array and works similarly to **ArrayList**.
+
+- **Vector** is synchronized and has some legacy methods the collections framework doesn't provide
+- Due to its synchronized nature, it provides worse performance for the core operations
+- **Vector** iterator is _fail-fast_ (throws an exception in case of concurrent modification)
+- It was present in the initial Java versions, and it's still supported
+
+> Using the **Vector** class is not recommended if there is no need for synchronization features. It comes with slower performance and unnecessary overhead.
+
+```java
+// Declaration
+public class Vector<E> extends AbstractList<E>
+  implements List<E>, RandomAccess, Cloneable, java.io.Serializable
+
+// Constructors
+public Vector()
+public Vector(int initialCapacity)
+public Vector(int initialCapacity, int capacityIncrement)
+public Vector(Collection<? extends E> c)
+```
+
+**Usage example:**
+
+```java
+Vector<String> mammals= new Vector<>();
+
+// Using the add() method
+mammals.add("Dog");
+mammals.add("Horse");
+
+// Using index number
+mammals.add(2, "Cat");
+System.out.println(mammals); // [Dog, Horse, Cat]
+
+// Using addAll()
+Vector<String> animals = new Vector<>();
+animals.add("Crocodile");
+
+animals.addAll(mammals);
+System.out.println(animals); // [Crocodile, Dog, Horse, Cat]
+```
+
+### Stack
+
+**Stack** class implements _stack_ data structure (last in, first out).
+
+- **Stack** is thread-safe
+- **Stack** is considered deprecated, and for single-thread logic, it's recommended to use **ArrayDeque**
+
+```java
+// Declaration
+public class Stack<E> extends Vector<E>
+
+// Constructors
+public Stack()
+```
+
+**Usage example:**
+
+```java
+Stack<String> trace = new Stack<>();
+trace.push("com.example.task01.Test.main(Solution.java:6)");
+trace.push("com.example.task01.Test.convertStringToInt(Solution.java:10)");
+trace.push("java.base/java.lang.Integer.parseInt(Integer.java:770)");
+trace.push("java.base/java.lang.Integer.parseInt(Integer.java:614)");
+
+System.out.println("Exception in thread \"main\":");
+while (!trace.isEmpty()) {
+  System.out.println("\t" + trace.pop());
+}
+
+// Exception in thread "main":
+//	java.base/java.lang.Integer.parseInt(Integer.java:614)
+//	java.base/java.lang.Integer.parseInt(Integer.java:770)
+//	com.example.task01.Test.convertStringToInt(Solution.java:10)
+//	com.example.task01.Test.main(Solution.java:6)
+```
 
 ## Map
 
