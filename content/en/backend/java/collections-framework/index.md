@@ -25,7 +25,7 @@ layout: single
 **Collection Framework** was introduced in Java JDK 1.2. Before that, Java had only **Arrays**, **Stack**, **Vectors**, and **Hashtables** for grouping objects.
 {{< /alert >}}
 
-### Advantages
+#### Advantages
 
 - **Consistent API.** The framework provides a set of interfaces implemented by all the classes. It means that all the similar classes have a common set of methods, which makes them simpler to memorize and use.
 
@@ -39,11 +39,7 @@ Java collection classes and interfaces are stored in the `java.util` package. Th
 
 <!-- ## Collection Interface
 
-A **Collection** represents a group of objects (elements).
-
-### Queue Interface
-
-**Queue** interface maintains a specific order of elements extraction (for example, FIFO). -->
+A **Collection** represents a group of objects (elements). -->
 
 ## List
 
@@ -245,6 +241,69 @@ while (!trace.isEmpty()) {
 //	java.base/java.lang.Integer.parseInt(Integer.java:770)
 //	com.example.task01.Test.convertStringToInt(Solution.java:10)
 //	com.example.task01.Test.main(Solution.java:6)
+```
+
+## Queue
+
+**Queue** interface maintains a specific order of element extraction (for example, FIFO). It is used to insert new elements at the end of the queue and remove them from the beginning of the queue.
+
+The **Queue** interface is implemented by several classes, including **LinkedList**, **ArrayDeque**, **PriorityQueue**, and **ArrayBlockingQueue**.
+
+The **Queue** implementations from the `java.util` package are **Unbounded Queues**, whereas implementations from the `java.util.concurrent` package are **Bounded Queues**.
+
+![Java Collections Framework - Queue](java-collections-framework-queue.png)
+
+#### Common operations:
+
+- **Adding** elements to the end of the queue: `add(Object)`, `offer(Object)`
+- **Removing** elements at the front of the queue: `remove()`, `poll()`
+- **Accessing** front element without removing it: `element()`, `peek()`
+- **Checking** the element presentence: `contains(Object)`
+- **Retrieving** an element by its index: `get(int index)`
+
+#### Time complexity:
+
+| Class / Operation | Data Structure | `add()` | `remove()` | `get()` |
+| --- | --- | --- | --- | --- |
+| **PriorityQueue** | Priority Heap | O(log(N)) | O(log(N)) | O(log(N)) |
+
+### PriorityQueue
+
+**PriorityQueue** is based on the priority heap and ordered by natural ordering (which can be changed by providing a custom **Comparator** at queue construction time).
+
+This queue is used when its elements need to be stored and handled based on their priority.
+
+- **PriorityQueue** doesn't allow NULL values and non-comparable objects
+- **PriorityQueue** is not thread-safe (the thread-safe alternative is **PriorityBlockingQueue**)
+
+```java
+// Declaration
+public class PriorityQueue<E> extends AbstractQueue<E>
+  implements java.io.Serializable
+
+// Constructors
+public PriorityQueue()
+public PriorityQueue(int initialCapacity)
+public PriorityQueue(Comparator<? super E> comparator)
+public PriorityQueue(int initialCapacity, Comparator<? super E> comparator)
+public PriorityQueue(Collection<? extends E> c)
+public PriorityQueue(PriorityQueue<? extends E> c)
+public PriorityQueue(SortedSet<? extends E> c)
+```
+
+**Usage example:**
+
+```java
+Queue<Integer> ages = new PriorityQueue<>();
+ages.add(10);
+ages.add(5);
+ages.add(99);
+ages.add(18);
+
+while (!ages.isEmpty()) {
+  System.out.print(ages.poll() + " ");
+}
+// Output: 5 10 18 99
 ```
 
 ## Map
