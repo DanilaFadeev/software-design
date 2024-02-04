@@ -9,7 +9,7 @@ menu:
   computer-science:
     parent: ""
     identifier: "introduction-439ab28a01d48c95feeb20b444e3c381"
-weight: 10
+weight: 110
 toc: true
 type: docs
 layout: single

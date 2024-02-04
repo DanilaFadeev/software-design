@@ -9,7 +9,7 @@ menu:
   computer-science:
     parent: ""
     identifier: "array-32b8115c40fff1dd02e7afd9d30ff450"
-weight: 20
+weight: 120
 toc: true
 type: docs
 layout: single

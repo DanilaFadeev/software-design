@@ -9,7 +9,7 @@ menu:
   computer-science:
     parent: ""
     identifier: "bucket-sort-3ec54f7b5ce2eb4da7a0506a8a22572a"
-weight: 100
+weight: 310
 toc: true
 type: docs
 layout: single
