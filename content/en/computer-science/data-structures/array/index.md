@@ -108,3 +108,72 @@ const numbers: number[] = [];
 {{< alert icon="👉" context="info" >}}
 The complete **StaticArray** and **DynamicArray** implementations are available {{< source "here" "/computer-science/data-structures/" >}}.
 {{< /alert >}}
+
+## Algorithms
+
+### Kadane's Algorithm
+
+**Kadane's Algorithm** is a dynamic programming technique used to find the <u>maximum subarray sum</u> within a given array of numbers. The algorithm takes `O(n)` time complexity and handles positive and negative numbers.
+
+#### Algorithm description:
+
+1. Initialize current **sum = 0** and **max = arr[0]**
+2. Loop through the **arr**:
+    - If **sum < 0** then **sum = 0** (negative value can't increase our maximum)
+    - Add the current **n** element to the **sum**
+    - If **sum > max** then **max = sum**
+
+```
+arr     [4  -1  2  -7  3  4]
+sum  0   4   3  5  -2  3  7   # max(sum, 0) + n
+max  4   4   4  5   5  5  7   # max(sum, max)
+```
+
+#### Implementation
+
+{{< tabs "kadane-algorithm" >}}
+{{< tab "Max Sum" >}}
+```java
+public static int maxSubArraySum(int[] arr) {
+  int curSum = 0;
+  int maxSum = arr[0];
+
+  for (int num : arr) {
+    curSum = Math.max(curSum, 0);      // get current positive sum or 0
+    curSum += num;                     // add current number
+    maxSum = Math.max(maxSum, curSum); // update max if greater
+  }
+
+  return maxSum;
+}
+```
+{{< /tab >}}
+{{< tab "Max Positions" >}}
+```java
+public static int[] maxSubArrayPositions(int[] arr) {
+  int curSum = 0, maxSum = arr[0];
+  int maxL = 0, maxR = 0;
+
+  for (int R = 0, L = 0; R < arr.length; R++) {
+    if (curSum < 0) {
+      curSum = 0; // reset current sum
+      L = R;      // reset left pointer
+    }
+
+    curSum += arr[R];
+    if (curSum > maxSum) {
+      maxSum = curSum; // update max sum
+      maxL = L;        // update max pointers
+      maxR = R;
+    }
+  }
+
+  return new int[] { maxL, maxR };
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+{{< alert icon="👉" context="info" >}}
+The complete **KadaneAlgorithm** implementation is available {{< source "here" "/computer-science/algorithms/KadaneAlgorithm.java" >}}.
+{{< /alert >}}
