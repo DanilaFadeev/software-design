@@ -1,4 +1,4 @@
-baseurl = "https://software-design.netlify.app/"
+baseurl = "https://software-design.dev/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

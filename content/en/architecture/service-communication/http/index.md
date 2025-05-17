@@ -62,7 +62,7 @@ urn:isbn:9780141036144
 
 - **Authority.**
   The name of the domain or the IP address of the requested server.
-  Example: `https://software-design.netlify.app/`
+  Example: `https://software-design.dev/`
 
 - **Port.**
   The port to be used for the server connection. By default, HTTP protocol is using `80` and HTTPS - `443`.
@@ -126,7 +126,7 @@ An **HTTP request** has the following structure:
 ```http
 GET / HTTP/1.1
 Accept: */*
-Host: software-design.netlify.app
+Host: software-design.dev
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 ```
@@ -447,7 +447,7 @@ It had come with a list of improvements:
 
 ```http
 GET /architecture/service-communication/http HTTP/1.1
-Host: software-design.netlify.com
+Host: software-design.dev
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5

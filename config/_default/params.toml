@@ -14,7 +14,7 @@ sourcesBranch = "main"
 ## Open Graph
 images = ["website-preview.png"]
 ogLocale = "en_US"
-domainTLD = "software-design.netlify.app"
+domainTLD = "software-design.dev"
 titleHome = "Software Design"
 
 ## Twitter Cards

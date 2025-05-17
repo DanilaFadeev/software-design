@@ -96,7 +96,7 @@ SSL Certificates might be represented in different formats. There is a good [SSL
 
 {{< alert icon="📝" context="info" >}}
 Getting the SSL certificate from the website:
-`openssl s_client -connect software-design.netlify.app:443 2>/dev/null | openssl x509`
+`openssl s_client -connect software-design.dev:443 2>/dev/null | openssl x509`
 {{< /alert >}}
 
 ### SSL Certificate Types
