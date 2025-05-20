@@ -1,21 +1,53 @@
 @font-face {
   font-family: 'Source Sans Pro';
+  font-weight: 400;
   font-style: normal;
-  font-weight: 200 900;
   font-display: swap;
-  src:
-    local('Source Sans 3'),
-    local('Source Sans Pro'),
-    url("fonts/source_sans_3/SourceSans3-Variable.ttf") format('truetype-variations');
+  src: url('fonts/source-sans-3/WOFF2/SourceSans3-Regular.ttf.woff2') format('woff2'),
+       url('fonts/source-sans-3/WOFF/SourceSans3-Regular.otf.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
+  font-weight: 400;
   font-style: italic;
-  font-weight: 200 900;
   font-display: swap;
-  src:
-    local("Source Sans 3 Italic"),
-    local("Source Sans Pro Italic"),
-    url("fonts/source_sans_3/SourceSans3Italic-Variable.ttf") format('truetype-variations');
+  src: url('fonts/source-sans-3/WOFF2/SourceSans3-It.ttf.woff2') format('woff2'),
+       url('fonts/source-sans-3/WOFF/SourceSans3-It.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/source-sans-3/WOFF2/SourceSans3-Medium.ttf.woff2') format('woff2'),
+       url('fonts/source-sans-3/WOFF/SourceSans3-Medium.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/source-sans-3/WOFF2/SourceSans3-MediumIt.ttf.woff2') format('woff2'),
+       url('fonts/source-sans-3/WOFF/SourceSans3-MediumIt.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/source-sans-3/WOFF2/SourceSans3-Bold.ttf.woff2') format('woff2'),
+       url('fonts/source-sans-3/WOFF/SourceSans3-Bold.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/source-sans-3/WOFF2/SourceSans3-BoldIt.ttf.woff2') format('woff2'),
+       url('fonts/source-sans-3/WOFF/SourceSans3-BoldIt.otf.woff') format('woff');
 }
