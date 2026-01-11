@@ -1,0 +1,9 @@
+<!-- Custom head -->
+<link rel="preload" as="font" href="{{ "fonts/source-sans-3/WOFF2/SourceSans3-Regular.ttf.woff2" | absURL }}" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="{{ "fonts/source-sans-3/WOFF2/SourceSans3-Medium.ttf.woff2" | absURL }}" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="{{ "fonts/source-sans-3/WOFF2/SourceSans3-Bold.ttf.woff2" | absURL }}" type="font/woff2" crossorigin>
+
+<!-- Analytics -->
+{{ if eq hugo.Environment "production" }}
+<script defer src="https://cloud.umami.is/script.js" data-website-id="3e6a442b-3514-41bd-867c-e9002cc9de86"></script>
+{{ end }}
