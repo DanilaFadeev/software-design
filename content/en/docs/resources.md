@@ -1,19 +1,17 @@
 ---
-title: "Blog"
+title: "Resources"
 description: ""
 summary: ""
-date: 2023-09-07T16:21:44+02:00
-lastmod: 2023-09-07T16:21:44+02:00
+date: 2024-02-27T09:30:56+01:00
+lastmod: 2024-02-27T09:30:56+01:00
 draft: false
-weight: 50
-categories: []
-tags: []
-contributors: []
-pinned: false
-homepage: false
+weight: 999
+toc: true
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+Link to valuable, relevant resources.

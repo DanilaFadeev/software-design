@@ -1,0 +1,6 @@
+// Put your custom SCSS code here
+@import "common/fonts";
+
+.header-bar {
+  border-image-source: linear-gradient(90deg, $primary, #8ed6fb 50%, #d32e9d);
+}

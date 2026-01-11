@@ -1,8 +1,8 @@
+.env
+.netlify
+.hugo_build.lock
 node_modules
 public
 resources
-.netlify
-.hugo_build.lock
-.DS_Store
-.vscode/
 *.drawio
+.DS_Store
