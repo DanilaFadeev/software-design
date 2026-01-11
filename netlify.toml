@@ -13,7 +13,7 @@
   command = "npm ci && npm run build"
 
 [context.deploy-preview.environment]
-  HUGO_ENV = "production"  # Force production mode for previews
+  HUGO_ENV = "preview"
 
 [dev]
   framework = "#custom"
