@@ -15,29 +15,21 @@ defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = false
 
-copyRight = "Copyright (c) 2022 Daniil Dzemidovich"
+copyRight = "Copyright (c) 2026 Daniil Dzemidovich"
 
 [build.buildStats]
   enable = true
 
 [outputs]
-  home = ["HTML", "RSS", "searchIndex"]
-  section = ["HTML", "RSS", "SITEMAP"]
+  home = ["html", "rss", "sitemap", "searchIndex"]
+  page = ["html"]
+  section = ["html", "rss", "sitemap"]
 
 [outputFormats.searchIndex]
   mediaType = "application/json"
   baseName = "search-index"
   isPlainText = true
   notAlternative = true
-
-# Add output format for section sitemap.xml
-[outputFormats.SITEMAP]
-  mediaType = "application/xml"
-  baseName = "sitemap"
-  isHTML = false
-  isPlainText = true
-  noUgly = true
-  rel  = "sitemap"
 
 [sitemap]
   changefreq = "monthly"
