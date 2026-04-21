@@ -41,14 +41,14 @@ copyRight = "Copyright (c) 2026 Daniil Dzemidovich"
     dir = ":cacheDir/:project"
     maxAge = -1 # "30m"
 
-[taxonomies]
-  contributor = "contributors"
-  category = "categories"
-  tag = "tags"
+#[taxonomies]
+#  contributor = "contributors"
+#  category = "categories"
+#  tag = "tags"
 
-[permalinks]
-  blog = "/blog/:slug/"
-  docs = "/docs/:sections[1:]/:slug/"
+#[permalinks]
+#  blog = "/blog/:slug/"
+#  docs = "/docs/:sections[1:]/:slug/"
 # docs = "/docs/1.0/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]

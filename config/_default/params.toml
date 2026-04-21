@@ -6,7 +6,7 @@ sourcesRepo = "https://github.com/DanilaFadeev/software-design-sources"
 sourcesBranch = "main"
 
 # mainSections
-mainSections = ["docs"]
+mainSections = ["architecture", "backend", "computer-science"]
 
 [social]
   # twitter = "getdoks"
