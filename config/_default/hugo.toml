@@ -21,9 +21,9 @@ copyRight = "Copyright (c) 2026 Daniil Dzemidovich"
   enable = true
 
 [outputs]
-  home = ["html", "rss", "sitemap", "searchIndex"]
+  home = ["html", "rss", "searchIndex"]
   page = ["html"]
-  section = ["html", "rss", "sitemap"]
+  section = ["html", "rss"]
 
 [outputFormats.searchIndex]
   mediaType = "application/json"
@@ -37,7 +37,7 @@ copyRight = "Copyright (c) 2026 Daniil Dzemidovich"
   priority = 0.5
 
 [caches]
-  [caches.getjson]
+  [caches.getresource]
     dir = ":cacheDir/:project"
     maxAge = -1 # "30m"
 

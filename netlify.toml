@@ -1,23 +1,28 @@
+[build.environment]
+  DART_SASS_VERSION = "1.97.3"
+  GO_VERSION = "1.26.0"
+  HUGO_VERSION = "0.156.0"
+  NODE_VERSION = "24.13.1"
+  NPM_VERSION = "11.8.0"
+  TZ = "Europe/Amsterdam"
+
 [build]
   publish = "public"
-  functions = "functions"
-  command = "npm ci && npm run build"
-
-[build.environment]
-  NODE_VERSION = "22.17.0"
-  NPM_VERSION = "10.9.2"
-  HUGO_VERSION = "0.154.4"
-
-[context.deploy-preview.environment]
-  HUGO_ENV = "preview"
+  command = "npm ci & npm run build"
 
 [dev]
   framework = "#custom"
-  command = "npm run dev"
+  command = "bun run dev"
   targetPort = 1313
   port = 8888
   publish = "public"
   autoLaunch = false
+
+# Redirects and rewrites — https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
+[[redirects]]
+	from = "/*"
+	to = "/404/"
+	status = 404
 
 # Redirects and rewrites — https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
 
