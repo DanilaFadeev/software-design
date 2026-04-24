@@ -4,3 +4,11 @@
 .header-bar {
   border-image-source: linear-gradient(90deg, $primary, #8ed6fb 50%, #d32e9d);
 }
+
+.table-compact {
+  font-size: .9rem !important;
+
+  code {
+    font-size: .75rem;
+  }
+}
