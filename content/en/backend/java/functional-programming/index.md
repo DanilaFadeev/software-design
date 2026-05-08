@@ -325,6 +325,48 @@ To avoid boxing and unboxing overhead with primitives, the JDK provides speciali
 | **long** | `ToLongFunction<T>` | `IntToLongFunction` | `LongUnaryOperator` | `DoubleToLongFunction` |
 | **double** | `ToDoubleFunction<T>` | `IntToDoubleFunction` | `LongToDoubleFunction` | `DoubleUnaryOperator` |
 
+## Method References
+
+If a lambda just calls an existing method, it can be written as a **method reference**:
+
+```java
+// Lambda expression
+Consumer<String> printer = s -> IO.println(s);
+
+// Equivalent method reference
+Consumer<String> printer = IO::println;
+```
+
+Method references fall into 4 categories:
+
+- **Static** — reference to a static method (`RefType::staticMethod`)
+- **Bound** — reference to a method on a specific object instance (`expr::instanceMethod`)
+- **Unbound** — reference to an instance method, where the instance is the first argument (`RefType::instanceMethod`)
+- **Constructor** — reference to a class constructor (`ClassName::new`)
+
+```java
+// Static method reference
+DoubleUnaryOperator sqrt = Math::sqrt;  // a -> Math.sqrt(a)
+IntBinaryOperator max = Integer::max;   // (a, b) -> Integer.max(a, b)
+
+// Bound method reference
+String prefix = "Hello";
+Predicate<String> startsWith = prefix::equals; // s -> prefix.equals(s)
+
+// Unbound method reference
+Function<String, Integer> toLength = String::length; // s -> s.length()
+Function<User, String> getId = User::getId; // user -> user.getId()
+BiFunction<String, String, Integer> indexOf = String::indexOf; // (text, word) -> text.indexOf(word)
+
+// Constructor method reference
+Supplier<List<String>> makeList = ArrayList::new; // () -> new ArrayList<>()
+Function<Integer, List<String>> makeSizedList = ArrayList::new; // size -> new ArrayList<>(size)
+```
+
+<!-- TODO: Combine Lambda Expressions (for example .and()) -->
+<!-- TODO: Imperative examples done in Functional style -->
+<!-- TODO: Pattern matching -->
+
 ## Resources
 
 - 📝 [Dev Java - Lambda Expressions](https://dev.java/learn/lambdas/)
